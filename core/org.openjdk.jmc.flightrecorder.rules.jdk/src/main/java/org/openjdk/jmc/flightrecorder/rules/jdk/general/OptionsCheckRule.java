@@ -399,7 +399,13 @@ public class OptionsCheckRule implements IRule {
 			new DeprecatedOption("G1ConcRSLogCacheSize", null, JavaVersionSupport.JDK_21, null),
 			new DeprecatedOption("G1ConcRSHotCardLimit", null, JavaVersionSupport.JDK_21, null),
 			new DeprecatedOption("EnableWaitForParallelLoad", null, null, JavaVersionSupport.JDK_21),
-			new DeprecatedOption("MetaspaceReclaimPolicy", null, JavaVersionSupport.JDK_21, null)};
+			new DeprecatedOption("MetaspaceReclaimPolicy", null, JavaVersionSupport.JDK_21, null),
+			new DeprecatedOption("RegisterFinalizersAtInit", JavaVersionSupport.JDK_23, JavaVersionSupport.JDK_22, null),
+			new DeprecatedOption("PreserveAllAnnotations", JavaVersionSupport.JDK_23, null, null),
+			new DeprecatedOption("DontYieldALot", JavaVersionSupport.JDK_23, null, null),
+			new DeprecatedOption("UseEmptySlotsInSupers", JavaVersionSupport.JDK_23, null, null), // only + = true and - still valid
+			new DeprecatedOption("UseNotificationThread", JavaVersionSupport.JDK_23, null, null),
+	};
 
 	@SuppressWarnings("nls")
 	private static final DeprecatedOption[] DEPRECATED_OPTIONS_X = {
@@ -409,7 +415,10 @@ public class OptionsCheckRule implements IRule {
 			new DeprecatedOption("run", JavaVersionSupport.JDK_8, null, JavaVersionSupport.JDK_9),
 			new DeprecatedOption("verify:none", JavaVersionSupport.JDK_13, null, null),
 			new DeprecatedOption("concgc", null, JavaVersionSupport.JDK_14, null),
-			new DeprecatedOption("noconcgc", null, JavaVersionSupport.JDK_14, null)};
+			new DeprecatedOption("noconcgc", null, JavaVersionSupport.JDK_14, null),
+			new DeprecatedOption("debug", JavaVersionSupport.JDK_22, null, null),
+			new DeprecatedOption("noagent", JavaVersionSupport.JDK_22, null, JavaVersionSupport.JDK_23),
+	};
 
 	private static final Map<String, EventAvailability> REQUIRED_EVENTS = RequiredEventsBuilder.create()
 			.addEventType(JdkTypeIDs.VM_INFO, EventAvailability.AVAILABLE).build();

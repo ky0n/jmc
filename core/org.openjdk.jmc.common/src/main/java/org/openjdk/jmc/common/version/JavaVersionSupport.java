@@ -75,4 +75,6 @@ public class JavaVersionSupport {
 	public static final JavaVersion JDK_19 = new JavaVersion(19, 0);
 	public static final JavaVersion JDK_20 = new JavaVersion(20, 0);
 	public static final JavaVersion JDK_21 = new JavaVersion(21, 0);
+   public static final JavaVersion JDK_22 = new JavaVersion(22, 0);
+	public static final JavaVersion JDK_23 = new JavaVersion(23, 0);
 }
